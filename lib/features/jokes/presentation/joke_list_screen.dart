@@ -70,7 +70,6 @@ class _JokeListScreenState extends State<JokeListScreen> {
           const SizedBox(height: Dimensions.size16),
       itemBuilder: (context, index) => JokeWidget(
         joke: jokes[index],
-        isFromFavList: false,
       ),
     );
   }

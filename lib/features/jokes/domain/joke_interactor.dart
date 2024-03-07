@@ -20,22 +20,6 @@ class JokeInteractor implements JokeUseCase {
   JokeInteractor(this._repository, this._securePreferenceManager);
 
   @override
-  Future<void> deleteAllFavJoke() {
-    return _repository.deleteAllFavJoke();
-  }
-
-  @override
-  Future<void> deleteFavJoke(Joke joke) {
-    return _repository.deleteFavJoke(JokeMapper.mapJokeToHiveObject(joke));
-  }
-
-  @override
-  Future<List<Joke>> getFavJokes() {
-    return _repository.getFavJokes().then((value) =>
-        value.map((e) => JokeMapper.mapJokeHiveObjectToDomain(e)).toList());
-  }
-
-  @override
   Future<Joke> getJokeOfTheDay() async {
     // Getting the data from the preferences
     int? lastSeeded = await _securePreferenceManager.getInt(
@@ -72,15 +56,5 @@ class JokeInteractor implements JokeUseCase {
         .map((e) => JokeMapper.mapJokeResponseToDomain(e))
         .take(15)
         .toList());
-  }
-
-  @override
-  Future<void> saveFavJoke(Joke joke) {
-    return _repository.saveFavJoke(JokeMapper.mapJokeToHiveObject(joke));
-  }
-
-  @override
-  Future<bool> checkFavJoke(Joke joke) {
-    return _repository.checkFavJoke(JokeMapper.mapJokeToHiveObject(joke));
   }
 }

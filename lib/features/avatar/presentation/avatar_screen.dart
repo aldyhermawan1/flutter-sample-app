@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sample/features/jokes/presentation/joke_screen.dart';
+import 'package:sample/features/jokes/presentation/joke_list_screen.dart';
 import 'package:sample/values/dimensions.dart';
 import 'package:sample/values/strings.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class AvatarScreen extends StatefulWidget {
+  const AvatarScreen({super.key});
 
-  static const routeName = '/';
+  static const routeName = '/avatar';
 
+  @override
+  State<AvatarScreen> createState() => _AvatarScreenState();
+}
+
+class _AvatarScreenState extends State<AvatarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Strings.appName),
+        title: const Text(Strings.titleAvatar),
       ),
       body: _buildBody(context),
     );
@@ -24,21 +28,13 @@ class MainScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const SizedBox(height: Dimensions.size64),
-        const Text(
-          Strings.labelSelectFeature,
-          style: TextStyle(
-            fontSize: Dimensions.size24,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        const SizedBox(height: Dimensions.size24),
+        const SizedBox(height: Dimensions.size16),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.size16),
           child: ElevatedButton(
-            onPressed: () => context.pushNamed(JokeScreen.routeName),
+            onPressed: () => context.pushNamed(JokeListScreen.routeName),
             child: const Center(
-              child: Text(Strings.actionJokes),
+              child: Text(Strings.actionJokesList),
             ),
           ),
         ),
@@ -46,9 +42,19 @@ class MainScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.size16),
           child: ElevatedButton(
-            onPressed: () => Fluttertoast.showToast(msg: 'Not ready yet'),
+            onPressed: () {},
             child: const Center(
-              child: Text(Strings.actionAvatar),
+              child: Text(Strings.actionJokeOfTheDay),
+            ),
+          ),
+        ),
+        const SizedBox(height: Dimensions.size16),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Dimensions.size16),
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Center(
+              child: Text(Strings.actionJokesFav),
             ),
           ),
         ),

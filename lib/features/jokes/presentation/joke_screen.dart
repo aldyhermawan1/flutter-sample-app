@@ -4,7 +4,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sample/features/jokes/bloc/states/get_joke_of_the_day_states.dart';
 import 'package:sample/features/jokes/domain/model/joke.dart';
-import 'package:sample/features/jokes/presentation/joke_fav_screen.dart';
 import 'package:sample/features/jokes/presentation/joke_list_screen.dart';
 import 'package:sample/shared/loading/loading_dialog.dart';
 import 'package:sample/utils/extensions/string_ext.dart';
@@ -70,16 +69,6 @@ class _JokeScreenState extends State<JokeScreen> {
               onPressed: () => context.read<JokeBloc>().add(GetJokeOfTheDayEvent()),
               child: const Center(
                 child: Text(Strings.actionJokeOfTheDay),
-              ),
-            ),
-          ),
-          const SizedBox(height: Dimensions.size16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: Dimensions.size16),
-            child: ElevatedButton(
-              onPressed: () => context.pushNamed(JokeFavScreen.routeName),
-              child: const Center(
-                child: Text(Strings.actionJokesFav),
               ),
             ),
           ),

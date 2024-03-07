@@ -1,11 +1,11 @@
 import 'package:alice/alice.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sample/features/avatar/presentation/avatar_screen.dart';
 import 'package:sample/features/jokes/presentation/joke_list_screen.dart';
 import 'package:sample/features/jokes/presentation/joke_screen.dart';
 import 'package:sample/features/main_screen.dart';
 
 import '../core/di/injector.dart';
-import '../features/jokes/presentation/joke_fav_screen.dart';
 
 class AppRouter {
   static GoRouter get router => _router;
@@ -33,9 +33,9 @@ class AppRouter {
       builder: (context, state) => const JokeListScreen(),
     ),
     GoRoute(
-      name: JokeFavScreen.routeName,
-      path: JokeFavScreen.routeName,
-      builder: (context, state) => const JokeFavScreen(),
+      name: AvatarScreen.routeName,
+      path: AvatarScreen.routeName,
+      builder: (context, state) => const AvatarScreen(),
     ),
   ];
 }

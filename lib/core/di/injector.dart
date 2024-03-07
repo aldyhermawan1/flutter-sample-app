@@ -12,6 +12,7 @@ import 'package:sample/core/base/preference/secure_preference/secure_preference_
 import 'package:sample/core/base/preference/secure_preference/secure_preference_manager_impl.dart';
 import 'package:sample/core/base/preference/shared_preference/preference_manager.dart';
 import 'package:sample/core/base/preference/shared_preference/preference_manager_impl.dart';
+import 'package:sample/features/avatar/di/avatar_module.dart';
 import 'package:sample/features/jokes/di/joke_module.dart';
 import 'package:sample/utils/constants/app_constants.dart';
 import 'package:sample/utils/security_utils.dart';
@@ -67,4 +68,5 @@ _injectDio() {
 
 _injectAppModule() {
   injectJokeModule();
+  injectAvatarModule();
 }
