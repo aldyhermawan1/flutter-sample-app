@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBnxUDTWgyPLnwe14MJoVvrrJt12PDRLb8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>11664298104</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hermawan.sample</string>
+	<key>PROJECT_ID</key>
+	<string>sample-app-7fa00</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sample-app-7fa00.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:11664298104:ios:5bb428974a57d9b0285d8d</string>
+</dict>
+</plist>
