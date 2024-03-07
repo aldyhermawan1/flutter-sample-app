@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sample/features/jokes/presentation/joke_screen.dart';
 import 'package:sample/values/dimensions.dart';
 import 'package:sample/values/strings.dart';
 
@@ -11,7 +13,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Strings.APP_NAME),
+        title: const Text(Strings.appName),
       ),
       body: _buildBody(context),
     );
@@ -19,25 +21,27 @@ class MainScreen extends StatelessWidget {
 
   Widget _buildBody(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const SizedBox(height: Dimensions.SIZE64),
+        const SizedBox(height: Dimensions.size64),
         const Text(
-          Strings.LABEL_SELECT_FEATURE,
+          Strings.labelSelectFeature,
           style: TextStyle(
-            fontSize: Dimensions.SIZE24,
+            fontSize: Dimensions.size24,
             fontWeight: FontWeight.w700,
           ),
         ),
-        const SizedBox(height: Dimensions.SIZE24),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Center(
-            child: Text(Strings.ACTION_JOKES),
+        const SizedBox(height: Dimensions.size24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Dimensions.size16),
+          child: ElevatedButton(
+            onPressed: () => context.pushNamed(JokeScreen.routeName),
+            child: const Center(
+              child: Text(Strings.actionJokes),
+            ),
           ),
         ),
-        const SizedBox(height: Dimensions.SIZE16),
+        const SizedBox(height: Dimensions.size16),
       ],
     );
   }

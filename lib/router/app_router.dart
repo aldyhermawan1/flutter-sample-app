@@ -1,8 +1,11 @@
 import 'package:alice/alice.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sample/features/jokes/presentation/joke_list_screen.dart';
+import 'package:sample/features/jokes/presentation/joke_screen.dart';
 import 'package:sample/features/main_screen.dart';
 
 import '../core/di/injector.dart';
+import '../features/jokes/presentation/joke_fav_screen.dart';
 
 class AppRouter {
   static GoRouter get router => _router;
@@ -14,30 +17,25 @@ class AppRouter {
   );
 
   static final _routes = <RouteBase>[
-    // GoRoute(
-    //   name: OnboardingScreen.routeName,
-    //   path: OnboardingScreen.routeName,
-    //   redirect: (context, state) {
-    //     PreferenceManager preference = locator.get();
-    //     bool isOnboardingDone =
-    //         preference.getBool(key: PreferenceConstants.ONBOARDING_KEY) ??
-    //             false;
-    //     if (isOnboardingDone) return LoginScreen.routeName;
-    //     return null;
-    //   },
-    //   builder: (context, state) {
-    //     return const OnboardingScreen();
-    //   },
-    // ),
-    // GoRoute(
-    //   name: LoginScreen.routeName,
-    //   path: LoginScreen.routeName,
-    //   builder: (context, state) {
-    //     return LoginScreen(
-    //       transactionDetailArguments:
-    //       state.extra as GoldTransactionDetailArguments?,
-    //     );
-    //   },
-    // ),
+    GoRoute(
+      name: MainScreen.routeName,
+      path: MainScreen.routeName,
+      builder: (context, state) => const MainScreen(),
+    ),
+    GoRoute(
+      name: JokeScreen.routeName,
+      path: JokeScreen.routeName,
+      builder: (context, state) => const JokeScreen(),
+    ),
+    GoRoute(
+      name: JokeListScreen.routeName,
+      path: JokeListScreen.routeName,
+      builder: (context, state) => const JokeListScreen(),
+    ),
+    GoRoute(
+      name: JokeFavScreen.routeName,
+      path: JokeFavScreen.routeName,
+      builder: (context, state) => const JokeFavScreen(),
+    ),
   ];
 }

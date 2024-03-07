@@ -85,28 +85,28 @@ class BaseTextField extends StatelessWidget {
       minLines: minLines,
       maxLines: maxLines,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.all(Dimensions.SIZE16),
+        contentPadding: const EdgeInsets.all(Dimensions.size16),
         isDense: true,
         prefixIcon: prefixIcon != null
             ? Container(
-          margin: const EdgeInsets.only(
-            left: Dimensions.SIZE12,
-            right: Dimensions.SIZE8,
-          ),
-          child: prefixIcon,
-        )
+                margin: const EdgeInsets.only(
+                  left: Dimensions.size12,
+                  right: Dimensions.size8,
+                ),
+                child: prefixIcon,
+              )
             : prefixIcon,
         hintText: hintText,
         hintMaxLines: 2,
         errorText: errorMessage,
         suffixIcon: suffixIcon != null
             ? Container(
-          margin: const EdgeInsets.only(
-            right: Dimensions.SIZE12,
-            left: Dimensions.SIZE8,
-          ),
-          child: suffixIcon,
-        )
+                margin: const EdgeInsets.only(
+                  right: Dimensions.size12,
+                  left: Dimensions.size8,
+                ),
+                child: suffixIcon,
+              )
             : suffixIcon,
       ),
     );

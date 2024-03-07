@@ -1,16 +1,24 @@
 class Strings {
-  static const APP_NAME = "Sample App";
+  static const appName = 'Sample App';
 
-  static const ACTION_JOKES = "Jokes";
-  static const ACTION_JOKE_LIST = "Show Joke List";
-  static const ACTION_JOKE_FAVORITE = "Show Favorite Joke";
-  static const ACTION_JOKE_OF_THE_DAY = "Show Joke of the day";
+  static const actionRetry = 'Retry';
+  static const actionJokes = 'Jokes';
+  static const actionJokesList = 'Show Joke List';
+  static const actionJokesFav = 'Show Favorite Joke';
+  static const actionJokeOfTheDay = 'Show Joke of the day';
+  static const actionOk = 'OK';
+  static const actionSaveFav = 'Favorite';
+  static const actionDeleteFav = 'Undo favorite';
 
-  static const LABEL_LOADING = "Loading";
-  static const LABEL_SELECT_FEATURE = "Select Features";
+  static const labelLoading = 'Loading';
+  static const labelLoadingDot = 'Loading...';
+  static const labelSelectFeature = 'Select Features';
 
-  static const TITLE_JOKES = "Jokes";
-  static const TITLE_JOKE_LIST = "Joke List";
-  static const TITLE_JOKE_FAVORITES = "Favorite Jokes";
-  static const TITLE_JOKE_OF_THE_DAY = 'Joke of the day';
+  static const messageGeneralEmpty = 'No data';
+  static const messageGeneralError = 'Something wrong';
+
+  static const titleJokes = 'Jokes';
+  static const titleJokesList = 'Joke List';
+  static const titleJokesFav = 'Favorite Jokes';
+  static const titleJokeOfTheDay = 'Joke of the day';
 }

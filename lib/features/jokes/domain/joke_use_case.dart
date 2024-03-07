@@ -12,4 +12,6 @@ abstract interface class JokeUseCase {
   Future<void> deleteFavJoke(Joke joke);
 
   Future<void> deleteAllFavJoke();
+
+  Future<bool> checkFavJoke(Joke joke);
 }

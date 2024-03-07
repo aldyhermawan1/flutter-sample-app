@@ -20,4 +20,13 @@ class Joke extends Equatable {
         setup,
         punchline,
       ];
+
+  static Joke dummy() {
+    return const Joke(
+      id: '1',
+      type: 'general',
+      setup: 'Knock Knock',
+      punchline: "Who's There",
+    );
+  }
 }

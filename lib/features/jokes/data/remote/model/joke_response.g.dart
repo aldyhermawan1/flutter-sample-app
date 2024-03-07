@@ -7,7 +7,7 @@ part of 'joke_response.dart';
 // **************************************************************************
 
 JokeResponse _$JokeResponseFromJson(Map<String, dynamic> json) => JokeResponse(
-      id: json['id'] as String?,
+      id: json['id'] as int?,
       type: json['type'] as String?,
       setup: json['setup'] as String?,
       punchline: json['punchline'] as String?,

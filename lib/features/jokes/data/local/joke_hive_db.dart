@@ -22,6 +22,11 @@ class JokeHiveDb {
     return box.values.toList();
   }
 
+  Future<bool> checkStatus(JokeHiveObject object) async {
+    final box = await _boxJoke();
+    return box.values.any((element) => element.id == object.id);
+  }
+
   Future<void> saveJoke(JokeHiveObject object) async {
     final box = await _boxJoke();
     await box.add(object);

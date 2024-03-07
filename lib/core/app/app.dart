@@ -30,7 +30,7 @@ class _AppState extends State<App> {
             BlocProvider(create: (context) => _jokeBloc),
           ],
           child: MaterialApp.router(
-            title: Strings.APP_NAME,
+            title: Strings.appName,
             routerConfig: AppRouter.router,
             theme: appTheme(),
             debugShowCheckedModeBanner: false,

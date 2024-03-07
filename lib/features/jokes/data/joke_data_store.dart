@@ -22,7 +22,7 @@ class JokeDataStore implements JokeRepository {
   }
 
   @override
-  Future<List<JokeResponse>> getApiJokes() {
+  Future<List<JokeResponse>> getJokes() {
     return _api.getJokes();
   }
 
@@ -34,5 +34,10 @@ class JokeDataStore implements JokeRepository {
   @override
   Future<void> saveFavJoke(JokeHiveObject object) {
     return _db.saveJoke(object);
+  }
+
+  @override
+  Future<bool> checkFavJoke(JokeHiveObject object) {
+    return _db.checkStatus(object);
   }
 }

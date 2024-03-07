@@ -5,7 +5,7 @@ part 'joke_response.g.dart';
 @JsonSerializable()
 class JokeResponse {
   @JsonKey(name: 'id')
-  final String? id;
+  final int? id;
 
   @JsonKey(name: 'type')
   final String? type;
@@ -21,7 +21,7 @@ class JokeResponse {
     this.type,
     this.setup,
     this.punchline,
-});
+  });
 
   factory JokeResponse.fromJson(Map<String, dynamic> json) =>
       _$JokeResponseFromJson(json);

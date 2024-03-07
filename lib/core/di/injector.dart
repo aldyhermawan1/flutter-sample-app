@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dio/dio.dart';
 import 'package:alice/alice.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
@@ -34,7 +34,7 @@ Future _injectSharedPreferences() async {
 
 _injectSecurePreferences() {
   FlutterSecureStorage flutterSecureStorage =
-      SecurityUtils.getSecureStorage(AppConstants.SECURE_PREFERENCE_NAME);
+      SecurityUtils.getSecureStorage(AppConstants.securePreferenceName);
   SecurePreferenceManager manager =
       SecurePreferenceManagerImplementation(flutterSecureStorage);
   locator.registerLazySingleton(() => manager);

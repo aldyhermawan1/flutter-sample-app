@@ -6,7 +6,7 @@ import 'package:hive/hive.dart';
 import 'package:sample/utils/constants/app_constants.dart';
 
 class SecurityUtils {
-  static const String STORAGE_KEY = 'storage_key';
+  static const String storageKey = 'storage_key';
 
   static getSecureStorage(String name) {
     return FlutterSecureStorage(
@@ -19,15 +19,15 @@ class SecurityUtils {
   }
 
   static Future<String> initEncryptionKey() async {
-    var secureStorage = getSecureStorage(AppConstants.DB_NAME);
-    var key = await secureStorage.read(key: STORAGE_KEY);
+    var secureStorage = getSecureStorage(AppConstants.dbName);
+    var key = await secureStorage.read(key: storageKey);
     if (key == null) {
       var hiveKey = Hive.generateSecureKey();
       await secureStorage.write(
-        key: STORAGE_KEY,
+        key: storageKey,
         value: base64UrlEncode(hiveKey),
       );
-      key = await secureStorage.read(key: STORAGE_KEY);
+      key = await secureStorage.read(key: storageKey);
     }
     return key!;
   }

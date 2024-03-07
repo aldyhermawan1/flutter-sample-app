@@ -30,7 +30,7 @@ class NetworkImageLoader extends StatelessWidget {
       imageUrl: imageUrl,
       imageBuilder: imageBuilder,
       placeholder: placeHolder,
-      // errorWidget: errorWidget ?? _defaultError,
+      errorWidget: errorWidget ?? _defaultError,
       progressIndicatorBuilder: loadingBuilder,
       filterQuality: FilterQuality.medium,
       fit: fit,
@@ -39,9 +39,9 @@ class NetworkImageLoader extends StatelessWidget {
     );
   }
 
-  // Widget _defaultError(context,url,error){
-  //   return SvgPicture.asset(
-  //     Vectors.IMG_BROKEN_IMAGE,
-  //   );
-  // }
+  Widget _defaultError(context, url, error) {
+    return SvgPicture.asset(
+      Vectors.icBrokenImage,
+    );
+  }
 }

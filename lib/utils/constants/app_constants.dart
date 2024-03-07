@@ -1,4 +1,4 @@
 class AppConstants {
-  static const SECURE_PREFERENCE_NAME = 'SecurePreference';
-  static const DB_NAME = 'Database';
+  static const securePreferenceName = 'SecurePreference';
+  static const dbName = 'Database';
 }

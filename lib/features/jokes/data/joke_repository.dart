@@ -2,7 +2,7 @@ import 'package:sample/features/jokes/data/local/model/joke_hive_object.dart';
 import 'package:sample/features/jokes/data/remote/model/joke_response.dart';
 
 abstract interface class JokeRepository {
-  Future<List<JokeResponse>> getApiJokes();
+  Future<List<JokeResponse>> getJokes();
 
   Future<List<JokeHiveObject>> getFavJokes();
 
@@ -11,4 +11,6 @@ abstract interface class JokeRepository {
   Future<void> deleteFavJoke(JokeHiveObject object);
 
   Future<void> deleteAllFavJoke();
+
+  Future<bool> checkFavJoke(JokeHiveObject object);
 }

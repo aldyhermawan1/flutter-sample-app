@@ -41,3 +41,12 @@ class DeleteAllFavJokeEvent extends JokeEvent {
   @override
   List<Object?> get props => [];
 }
+
+class CheckFavJokeEvent extends JokeEvent {
+  final Joke joke;
+
+  const CheckFavJokeEvent(this.joke);
+
+  @override
+  List<Object?> get props => [];
+}

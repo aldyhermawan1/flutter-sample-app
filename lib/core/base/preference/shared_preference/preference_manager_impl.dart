@@ -14,7 +14,7 @@ class PreferenceManagerImplementation implements PreferenceManager {
 
   @override
   Future saveDouble({required String key, required double value}) {
-   return  _preferences.setDouble(key, value);
+    return _preferences.setDouble(key, value);
   }
 
   @override
@@ -24,7 +24,7 @@ class PreferenceManagerImplementation implements PreferenceManager {
 
   @override
   Future saveString({required String key, required String value}) {
-   return _preferences.setString(key, value);
+    return _preferences.setString(key, value);
   }
 
   @override
@@ -69,11 +69,11 @@ class PreferenceManagerImplementation implements PreferenceManager {
 
   @override
   Future clear() {
-   return _preferences.clear();
+    return _preferences.clear();
   }
 
   @override
   Future removeValue({required String key}) {
-   return _preferences.remove(key);
+    return _preferences.remove(key);
   }
 }

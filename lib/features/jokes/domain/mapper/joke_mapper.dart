@@ -6,7 +6,7 @@ import 'package:sample/utils/extensions/string_ext.dart';
 class JokeMapper {
   static Joke mapJokeResponseToDomain(JokeResponse response) {
     return Joke(
-      id: response.id.orEmpty(),
+      id: response.id.toString(),
       type: response.type.orEmpty(),
       setup: response.setup.orEmpty(),
       punchline: response.punchline.orEmpty(),

@@ -19,6 +19,7 @@ void injectJokeModule() {
     ..registerSingleton(JokeApi(locator.get()))
     ..registerSingleton<JokeRepository>(
         JokeDataStore(locator.get(), locator.get()))
-    ..registerSingleton<JokeUseCase>(JokeInteractor(locator.get()))
+    ..registerSingleton<JokeUseCase>(
+        JokeInteractor(locator.get(), locator.get()))
     ..registerSingleton(JokeBloc(locator.get()));
 }
